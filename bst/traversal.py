@@ -64,12 +64,18 @@ class BST:
             return
         arr = []
         cnt = 0
+        level = 0
     
         arr.append(rt)
         while (cnt < len(arr)):
                 node = arr[cnt]
-                print(node.data, end=" ")
-                cnt += 1
+                node_count=len(arr)-cnt #NO OF NODES AT CURRENT LEVEL
+                print("\nLevel ", level, " : ", end="")
+                for i in range(node_count):
+                    node = arr[cnt]
+                    print(node.data, end=" ")
+                    cnt += 1
+                level += 1
                 if node.left is not None:
                     arr.append(node.left)
                 if node.right is not None:

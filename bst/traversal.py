@@ -73,8 +73,8 @@ class BST:
                 print("\nLevel ", level, " : ", end="")
                 for i in range(node_count):
                     node = arr[cnt]
-                    print(node.data, end=" ")
-                    cnt += 1
+                    print(node.data, end=" ")#VISITING NODE
+                    cnt += 1#NO OF NODES VISITED AT CURRENT LEVEL
                 level += 1
                 if node.left is not None:
                     arr.append(node.left)
